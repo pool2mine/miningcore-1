@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,8 +8,15 @@
     <RootNamespace>Miningcore</RootNamespace>
     <Platforms>AnyCPU</Platforms>
     <PreserveCompilationContext>true</PreserveCompilationContext>
+    <RepositoryUrl>git://github.com/minernl/Miningcore.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
+    <PropertyGroup>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+  
   <PropertyGroup>
     <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
   </PropertyGroup>
@@ -26,12 +33,11 @@
 
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>7.3</LangVersion>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <StartupObject>Miningcore.Program</StartupObject>
     <Company>Miningcore.com</Company>
     <Version>2.0.0</Version>
-</PropertyGroup>
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Api\Notifications\**" />
@@ -54,6 +60,7 @@
   </ItemGroup>
     
   <ItemGroup>
+      <PackageReference Include="AdvancedDLSupport" Version="3.2.0" />
       <PackageReference Include="AspNetCoreRateLimit" Version="3.0.5" />
       <PackageReference Include="Autofac" Version="4.9.2" />
       <PackageReference Include="AutoMapper" Version="8.1.0" />

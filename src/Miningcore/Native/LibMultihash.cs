@@ -148,6 +148,8 @@ namespace Miningcore.Native
         [DllImport("libmultihash", EntryPoint = "sha3_512_export", CallingConvention = CallingConvention.Cdecl)]
         public static extern int sha3_512(byte* input, void* output, uint inputLength);
 
+
+
         #region Ethash
 
         [StructLayout(LayoutKind.Sequential)]
