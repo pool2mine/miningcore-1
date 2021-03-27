@@ -215,7 +215,7 @@ namespace Miningcore.Mining
                     var poolHashTimeFrame = StatsWindowsTimeFrame.TotalSeconds;
 
                     // pool hashrate
-                    var poolHashesAccumulated = result.Sum(x => x.Sum);
+                    var poolHashesAccumulated = result.Sum(x => x.Count);
                     var poolHashrate = pool.HashrateFromShares(poolHashesAccumulated, poolHashTimeFrame);
                     poolHashrate = Math.Floor(poolHashrate);
                     pool.PoolStats.PoolHashrate = poolHashrate;
